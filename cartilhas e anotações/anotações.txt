@@ -1,0 +1,591 @@
+FORMAT 
+
+vc pode usar uma outra forma de nomenclatura para a apresentação de uma variável usando o format, print("o faturamento da loja foi de {}" .format(faturamento)), caso for mais de 1 variavel segue esse mesmo formato assimp or exemplo {} {} {} ai a variavel 1, 2 e 3 
+
+F-STRING
+
+Muito melhor que o format por exemplo print(f"O faturamento foi de {faturamento} e o lucro de {faturamento - custo}) dentro do {} é capaz de fazer contas e só colocar o nome da variavel dentro dele sem precisar acrscentar muita coisa  
+
+RECEBE DO INPUT 
+
+pode colocar o str na frente do input para mudar o formato que recebe por exemplo '"faturamento = float(input("insira o faturamento))"' ai no type(para aparecer o formato da variavel) vai estar float 
+
+CASO DE IF E ELSE COM OUTRO IF E ELSE DENTRO
+
+meta = 0.05 
+taxa = 0 
+rendimento = int(input("Qual é o seu rendimento? "))
+
+if rendimento > meta:
+    if rendimento > 0.20: 
+        taxa = 0.04 
+        print(f"A taxa foi de {taxa}")
+    else:
+        taxa = 0.02
+        print(f"A taxa foi de {taxa}")
+else:
+    taxa = 0 
+    print(f"a taxa foi de {taxa})
+
+
+    ELSE IF NO PY É ELIF 
+
+    meta = int(input("QUal foi a sua meta?"))
+    vendas = 15000
+
+    if vendas < meta: 
+        print("Não ganhou bônus")
+    elif vendas > (meta * 2): 
+        bonus = 0.07 * vendas
+        print(f" Ganhou {bonus} de bônus")
+    else: 
+    bonus = 0.03 * vendas 
+    print(f"Ganhou {bonus} de bônus")
+
+    LEN e o [] sem explicação
+
+    é um comando para poder contar o numero de caractere, por exemplo 
+        print(len(texto)) e o pode se usar o [] para ver o indice do caracter por exemplo [4] no nome giovani é o O pq cmc em 0 e vai até o caracter que está sendo pedido 
+
+    NO CASO NEGATIVO DO "LEN e o [] sem explicação"
+
+    só usando o negativo e nn tem o 0 
+
+    no exemplo lira@gmail.com o comando print(email[5: ]) aparecerá gmail.com por o @ é o 5° caracter desse email, quando está ANTES do : ele é DESDE DE quando está DEPOIS é ATÉ que.4 
+
+    TUPLA 
+
+    é igual a lista normal com [] mas a tupla é ()
+
+    ela pode se demenbrar mais facil por exemplo tupla = ("lira", 20/02/2023, 1999, "estagiario")
+
+    ai vc só pega e faz: nome, data_contratacao, data_nascimento, vaga = tupla 
+
+    AO FZR A TUPLA ELE CRIARÁ VARIAVEIS COM ESSAS INFORMAÇÕES RETIADAS DA TUPLA 
+
+    por exemplo print(data_contratacao)  --> aparecerá 20/02/2023
+
+    Pode se adicionar tbm na tupla usando por exemplo --> dicionario[chave] = valor por exemplo:
+
+    lucro1_tri = {"janeiro" : 10000, "favereiro": 25000, "março": 25430}
+
+    lucro1_tri[abril] = 880000
+
+    ai no print fica --> {"janeiro" : 10000, "favereiro": 25000, "março": 25430, "abril": 880000}
+
+    pode usar tbm uma função chamada .update, por exemplo:
+
+    lucro1_tri.update("maio": 89000, "junho": 10000000), ai no print fica:
+
+    {"janeiro" : 10000, "favereiro": 25000, "março": 25430, "abril": 880000, "maio": 89000, "junho": 10000000}
+
+    EXCLUIR UM ITEM DA TUPLA 
+    utilizarem o comando del, por exemplo: 
+
+    del lucro1_tri["junho"] 
+    no print ele só nn estará 
+
+    podendo ser usado o pop mas a diferença é q ele retira e transforma em uma variavel para CASO vc queira usar, por exemplo 
+
+    lucro_junho = lucro1_tri.pop("junho")
+
+    ai no print de lucro1_tri ele nn estará mas caso vc queira utilizar é só usar a variavel que foi armazanada o pop, no nosso caso é o lucro_junho q no print irá aparecer SOMENTE o valor de junho, que no caso é 10000000 no print da viravel lucro_junho
+
+    existe o .clear q a função dele é transofrmar tudo em nulo por exemplo 
+
+    lucro1_tri.clear()
+
+    no print irá ser {}
+
+    FOR EM TUPLA 
+
+    vendas_tecnologia = {"uma caralhada de coisa" : seus valores }
+
+    usando o for fica assim: 
+    for chave in vendas_tecnologia:
+    só o print disso irá aparecer as chaves (uma caralhada de coisa) e nn precisa do i 
+    agr pra pegar os valores é usar vendas_tecnologia[chave] q ai ele pega o valor dos item por exemplo
+
+    print(f"O item {chave} vendeu {vendas_tecnologia[chave]} de unidades")
+
+
+    ITERABLE 
+
+    é qlqr coisa sksksks, é uma respostas meio q solidificada 
+
+    SET 
+
+    set é uma função que vc usa para nn repetir valores, ou seja é um dicionario mas sem valores atribuidos e VAI estar com uma ordem aleatória, MAS pelo menos nn vai estar repetido sksksks, por exemplo ["arroz", "feijão", "macarrão", "mamão", "abacaxi", "carteirão"] mto util para certificar se nn tem duplicado 
+
+
+SORT 
+
+É uma função de ordenação por exemplo 3,4,6,7, 
+
+ai ele coloca em ordem 3,4,6,7 em crescente, podendo usar tbm o Reverse e para textos MAS ele usa outro alfabeto 
+
+FUNCTION 
+
+é tipo vc criar a sua propria função, é mto bom pra bc usar pq vc faz o 1° e dps é só usar a sua "função"
+
+
+CASEFOLD ou LOWER
+
+é usado para transformaer tudo em minusculo
+
+
+
+RETURN 
+server para retirar e definir o valor da function, por exemplo se no final eu defino o returno e produto por exemplo quando for ver o valor da ação da function ele irá exibir e usar como se fosse uma variavel normal 
+
+def cadastrar_produto():
+    produto = input("digite o nome do produto que deseja cadastrar")
+    produto = produto.lower()
+    produto = produto.strip()
+    print(f"O produto {produto} foi cadastrardo")
+    return produto 
+
+produto = cadastrar_produto()
+
+print(produto) -->
+O produto macarrao foi cadastrardo
+macarrao
+
+
+SEP  
+
+é um paramentro dentro do print, ele é a sua regra de separação entre cada coisa dentro do print, por exemplo: print("blablabla", "blablabla", "blablabla", "blablabla", "blablabla", sep = \n)
+
+ai ele dá 
+"blablabla"
+"blablabla"
+"blablabla"
+"blablabla"
+
+
+ANOTAÇOES EM FUNCTIONs
+
+utilizasse as 3 ' para uma ANOTAÇÃO, mas com palavras chaves que fazem a divisão por areas por exemplo 
+
+def minha_soma(num1, num2, num3):
+    ''' Faz a soma de 3 numeros int e devolve como resposta um int  
+        Paramenters:
+            num1 (int): o 1° a ser somado 
+            num2 (int): o 2° a ser somado 
+            num3 (int): o 3° a ser somado 
+        
+        Returns: 
+            soma (int): o valor da soma dos 3 é 
+
+    '''
+    return mum1, num2, num3 
+
+
+    minha_soma() AO ESTAR COM O TREQUINHO DO MOUSE EMCIMA DO () E APRETAR SHIT E TAB ELE IRÁ APARECER AS ANOTAÇÕES DA FUNCTION
+
+    TIME 
+    EPOCH é uma data q é 1° de janeiro de 1970
+
+    CTIME é trasnformar o tempo em segundos em tempo local tipo é 1928e49384r8092374083754987423987 segundos ai fica o dia, mês e a hora, minuto e segundo local e o ano 
+
+    LOCALTIME é uma separação em supla(possível desmenbração das infos por exemplo só do mês) do tempo em geral
+
+    qualquer duvida pegar na biblioteca do time do python
+
+
+    TIME STRFTIME 
+
+    é uma desmebranção de abreviações com % na frente para pegar informações individuais 
+
+
+
+LINK PARA A DOCUMENTAÇÃO DO TIME 
+    https://docs.python.org/3/library/time.html
+
+
+BIBLIOTECA locale 
+
+codigo para declarar q é BR 
+locale.setlocale(locale.LC_TIME, "pt_BR.TF-8")
+
+com isso ele ja transforma tudo para informações BR 
+
+DATETIME 
+
+ele pega o calendário normal do dia mas com a hora junto, já o TODAY ele só pega a data 
+
+
+
+PANDAS FINALMENTEEEEEEEEEEEEE
+
+pandas.read_[aq vai o formato do arquivo em questão para o pandas entender](r'Nome_do_arquivo.formato_escolhido', sep = ", ou qlqr coisa q separe os enunciados")
+
+
+ENCONDING 
+tem que smp tentar trocar enconding na exportação do read do pandas, são eles:  
+#encoding='latin1', encoding='ISO-8859-1', encoding='utf-8' ou então encoding='cp1252'
+
+DROPADO? DROP 
+
+o .drop() é usado para retirar linhas ou colunas como no exemplo {
+
+    clientes_df = clientes_df.drop(["Unnamed: 7", "Unnamed: 8", "Unnamed: 9", "Unnamed: 10"], axis=1)
+
+
+display(clientes_df)
+
+}
+
+foi utilizado para retirar as colunas vazias, mas um ponto importante é q o axis=1 ou 0 é oq indicam oq vc quer tirar, se é coluna ou linha, sendo 1 e 0 respectivamente 
+
+
+MERGE? OU MERGULHEI 
+ele serve para simplismente acrscentar uma coluna a outra coluna como no exemplo abaixo, o ON ele serve para indicar qual a coluna que vc gostaria de acrscentar a tabela VENDAS_DF 
+
+
+{
+#juntando os dataframes
+vendas_df = vendas_df.merge(produtos_df, on='ID Produto')
+vendas_df = vendas_df.merge(lojas_df, on='ID Loja')
+vendas_df = vendas_df.merge(clientes_df, on='ID Cliente')
+
+
+#exibindo o dataframe final
+display(vendas_df)
+}
+
+
+RENAME? É ISSO MSM?
+
+como ja diz é para renomear uma coluna, por exemplo o E-mail sem nd é alguma informação sem ser imtuitiva se for por exemplo o email da loja do clinte, do filho dele, é uma informação meio jogada 
+
+por exemplo { 
+
+#vamos renomear o e-mail para ficar claro que é do cliente
+vendas_df = vendas_df.rename(columns={'E-mail': 'E-mail do Cliente'})
+display(vendas_df)
+
+}
+
+
+COUNT_VALUES, CONTANDO VALORES?????
+é usado pelo pandas para contar quantas vezes uma informação foi repetida dentro de uma linha, coluna, como no exemplo abaixo: 
+{
+frequencia_clientes = vendas_df['E-mail do Cliente'].value_counts()
+}
+
+
+PLOT? PLOTANDO UNS TREM 
+
+ele serve pra criar gráfico apartir de um banco de dados, como por exemplo, em que o .plot é a função e dentro o parametro do grafico, podendo utiliza como quiser, maior, menor, com numero minimo, com numero maximo, o tamanho é figzise de tamanho da figura. Pode-se usar tbm o KIND que é o TIPO de gráfico q vc quer, por exemplo o bar q é GRAFICO DE BARRA :{ 
+frequencia_clientes[:5].plot(figsize=(15, 5))
+}
+  
+
+
+AQ É PUTARIA DE GRUPO E SOMA 
+o .groupby é usado para ver todas as informações que repetem e ele agrupa elas e dps usa o .sum() para somar as informações como no exemplo abaixo em q o banco era gigantes e ele pegou o nome das lojas e usou isso para montar os grupos e poder ver qual vendeu mais, por exemplo, MAS ELE NN DEIXA NA ORDEM CORRETA 
+{ 
+vendas_lojas = vendas_df.groupby('Nome da Loja').sum()
+}
+
+depois disso é só fzr {vendas_lojas = vendas_lojas[['Quantidade Vendida']]} para ele aparecer e com 2 [] para melhor visualização 
+
+INDEX ATÉ NO GRAFICO DO PANDAS COM O PLOT?
+ele é usado para representa o maior indice q no caso do groupby é o maior numero que representa por exmeplo: 
+{    
+maior_valor = vendas_lojas['Quantidade Vendida'].max() sendo o maior "nome"
+melhor_loja = vendas_lojas['Quantidade Vendida'].idxmax() sendo o maior "valor"
+print(melhor_loja, maior_valor)
+}
+
+ORDENANDO DNV COM O SORT? MAS ELE É PICA D VDD 
+o .sort_values é usado para ordernar no pandas, ele é uma função e tem seus paramentros como no exemplo, ele precisa da tabela que ele irá fazer isso soq ele fica no menor pro maior, ou seja o maior vai ser o ultimo e para deixar os maiores emcima ele usa o ascending = FALSE para usar na ordem correta: 
+{
+vendas_lojas = vendas_lojas.sort_values('Quantidade Vendida', ascending = False)
+}
+
+
+pd.to_datetime, ent agr objeto vira até data? 
+
+
+o .to_datetime é responsável por trasnformar objetos que nn eram reconhecidos como datas e passa a ser cohecido como data msm
+
+vendas.df["Data da Venda"] = pd.to_datetime(vendas_df["Data da Venda"], format= "%d,%m,%Y") 
+
+caso vc queira pegar os "%d,%m,%Y" e usar separadamente vc pode usar dfkjdfkjdkfj.dt.year ou month ou day
+
+CASO QUEIRA que ele separe em coluna essas informacoes tem q usar o
+                             vendas_df["Ano Venda"] = vendas_df["Data da Venda"].dt.year
+
+
+
+.head() server pra pegar a cbc
+ele e o header do python
+
+
+
+AGR TEM O .LOC, q é de localização 
+Ele utiliza o indice para poder buscar as informacoes, tipo o enumarate nas é só pra banco, agr a aplicação dele é putaria, vc tem q colocar o indice na frente e dps qual a coluna q vc quer, por exemplo {
+    novos_produtos= novos_produtos.loc["Contoso Optical Wheel OEM PS/2 Mouse E60 Black", "Preco Unitario"]
+                                            indice que foi alterado com o .set_index          Coluna 
+
+}
+
+TEMOS A SUA VARIAÇÃO LOC, O ILOC KKKKKKKKKKKKKK
+ele é usa a matriz para fazer o print de um objeto tipo no exemplo {  
+    novos_produtos= novos_produtos.iloc[2,5]
+} é a msm coisa do loc tanto q eu peguei da linha do loc mas com a diferença é q foi a posição dele na matriz 
+
+
+
+.SET_INDEX, definindo qual a tabela será o index?
+
+ss, ele utiliza uma outra tabela em q pode escolher para poder estar utilizando como index para consulta ao invés de numeros novos_produtos = novos_produtos.set_index("Nome Produto") fazendo assim com q ele se torne o index da tabela 
+
+
+AGR DE DICIONARIO PARA DATAFRAME, MURILO SE NN TA PRONTO PRA MIM HEHEHE KSKSSKKSKK
+
+* precisa ser outra variavel para armanezar o dataframe representado pelo df 
+vendas_produtos_df* = pd.DataFrame.from_dict()
+
+
+TELA DE CARRREGAMENTO? ESSA É NOVA NÉ PY 
+
+
+
+VOTLAMOS COM A API? TA PULANDO NÉ SAFADO?
+
+import requests 
+import json 
+
+cotacao = requests.get("https://economia.awesomeapi.com.br/json/all")
+
+cotacao_dic = cotacao.json()
+print(cotacao_dic)
+
+
+o get é coloca o link da API e lá que vc indica daonde se quer pegar as info 
+.json server para transforma em algo legivel pro python e pra nos 
+
+
+PRATICA BOA COM O requests 
+smp pegar o [0] para entender como esta estruturado a informação
+ 
+
+
+                             CLASS PRA Q NN É MSM?????
+
+Agr flnd de class-> como definir no piton
+Sendo o __init__ o Construct
+
+
+class Vagabunda:
+    def __init__():
+        sdjsddksjdkjsdkj
+
+
+SELF NESSA PR NN TEM ND A VER COM PHP
+    o self representa algo muito estranho, até agr oq eu imagino é q ele seja algo por exemplo a variavel para receber o comando por exemplo{
+
+class TV:            
+    def __init__(self):
+        self.cor = "preta"
+        self.ligada = False
+        self.tamanho = 55
+        self.canal = "Netflix"
+        self.volume = 10
+
+tv_sala = TV()
+tv_quarto = TV()
+
+print(tv_sala.cor)
+print(tv_quarto.canal)
+
+
+ISSO RESULTA NO OUTPUT COMO 
+
+preta 
+Netflix
+    }
+
+
+PRIVATE NO PYTHON, EXISTE SS GLORIA A DEEEEEEEEUUUUUUUSSSSSSSSS
+
+o private existe no php, ele é representado por 2 _ por exemplo 
+
+class Sdjs:
+    def __init__(self):
+        self.__sdsd = 2
+
+    def conta(self):
+        self.__sdsd + 2
+
+sdsd = Sdjs()
+print(sdsd.__sdsd) --> isso vai dar erro pq é private 
+
+
+STATIC EM CLASSES, VTMNC 
+q bagui torto do krai kkkkkkkkkkkkkkkkkk
+
+vc precisa usar isso:
+
+@staticmethod 
+def _data_hora():
+
+
+
+
+USANDO UMA CLASSE PRA MUDAR ALGO DENTRO DE OUTRA CLASSE, MO PUTARIA 
+
+
+def transferir(self, qntd:float, conta):
+        conta.saldo -= qntd
+        self.saldo += qntd
+        return self.saldo
+
+sendo a conta a variavel q será a varivael q usa as instancias da classe, 
+visu1 = Conta1(), ai visu2 = Conta2()
+ai visu2.transferir(100, visu1)
+
+ai ele tira 100 da Conta1 e adiciona Conta2 em 100 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FECEG 
+ideia 1 {
+Olá, eu sou o Copilot, um assistente de inteligência artificial que pode te ajudar com diversas tarefas. 😊
+
+Pelo que entendi, você quer criar um site que esteja de acordo com as ODSs, que são os Objetivos de Desenvolvimento Sustentável da ONU. Existem 17 ODSs que abrangem temas como erradicação da pobreza, educação de qualidade, saúde e bem-estar, igualdade de gênero, ação climática, entre outros¹².
+
+Eu pesquisei na web e encontrei alguns exemplos de sites que estão relacionados aos ODSs, que podem te inspirar:
+
+- [Objetivos de Desenvolvimento Sustentável | As Nações Unidas no Brasil](^4^): Este site mostra o trabalho da ONU e seus parceiros no Brasil para alcançar os ODSs, com histórias, notícias, dados e recursos. Você pode usar este site como referência para criar um site que mostre o impacto dos ODSs no seu país ou região, ou que divulgue iniciativas locais que contribuam para os ODSs.
+- [Oddspedia](^5^): Este site é uma plataforma de apostas esportivas que oferece placares ao vivo, resultados, odds e ferramentas de apostas. Você pode usar este site como referência para criar um site que promova o ODS 3 (Saúde e Bem-Estar), incentivando as pessoas a praticar esportes e a ter hábitos saudáveis. Você pode também incluir informações sobre os benefícios do esporte para a saúde física e mental, e sobre como o esporte pode ser um meio de inclusão social e de paz.
+- [ODS: sugestões de ações para cada um dos Objetivos](^6^): Este site oferece ideias de ações voluntárias alinhadas a cada ODS, que podem ser realizadas por indivíduos, empresas ou organizações. Você pode usar este site como referência para criar um site que estimule o ODS 17 (Parcerias e Meios de Implementação), facilitando a conexão entre voluntários e projetos sociais que precisam de apoio. Você pode também criar um sistema de gamificação que reconheça e recompense os voluntários que mais se engajarem com os ODSs.
+
+Espero que essas ideias te ajudem a criar um site incrível e sustentável. Se precisar de mais ajuda, pode contar comigo. 😉
+}
+
+ideia 2 {
+Uma ideia de site interativo que eu tenho é um que simule o impacto das nossas escolhas no ODS 13 (Ação Contra a Mudança Global do Clima). Neste site, o usuário poderia escolher diferentes cenários, como por exemplo:
+
+O tipo de transporte que usa (carro elétrico, carro a gasolina, bicicleta, transporte público, etc.)
+A distância que percorre por dia (em quilômetros)
+A fonte de energia que utiliza (solar, eólica, hidrelétrica, termelétrica, etc.)
+O consumo de água que tem (em litros)
+O consumo de alimentos que tem (vegetariano, vegano, onívoro, etc.)
+O site então calcularia a emissão de gases de efeito estufa (em toneladas de CO2 equivalente) e o consumo de recursos naturais (em hectares) que cada cenário representa. O site também mostraria o quanto esses valores estão acima ou abaixo da média mundial, e quais seriam as consequências para o clima e para a biodiversidade se todos fizessem as mesmas escolhas.
+
+O site poderia usar gráficos, animações, vídeos e outros recursos visuais para tornar a simulação mais atraente e informativa. O site também poderia oferecer dicas e sugestões de como reduzir o impacto ambiental e contribuir para o ODS 13.
+
+
+}
+
+
+FECEG ATUTU
+Olá, este é o Copilot. Eu posso te ajudar a entender a documentação da API do PlugShare. Aqui está um resumo sobre ela com as informações que você pediu:
+
+- **Uso da API**: Você pode usar a API do PlugShare para acessar os endpoints da API, que podem obter informações sobre estações de carregamento, avaliações e fotos em seu banco de dados. A API do PlugShare é uma API REST que usa chaves de API e autenticação básica HTTP para permitir o acesso à API. Você pode registrar uma nova chave de API do PlugShare em seu portal de desenvolvedor.
+- **Como usar a API**: Você pode usar vários métodos de pesquisa para retornar uma lista de locais. Cada local conterá uma ou mais estações, cada uma das quais pode conter uma ou mais tomadas. Nem todas as informações sobre um local são retornadas pelo método de pesquisa; para avaliações, fotos e mais, você vai querer solicitar o local diretamente usando seu identificador exclusivo. Aqui estão alguns exemplos para você começar: `GET /locations/nearby` e `GET /locations/region`¹[1].
+- **Linguagem da API**: A API do PlugShare não depende de uma linguagem específica, pois é baseada em HTTP e JSON. Você pode usar qualquer linguagem que suporte esses protocolos para se comunicar com a API. No entanto, alguns exemplos de código são fornecidos em Python, Ruby e PHP na documentação.
+
+Origen: Conversación con Bing, 6/2/2024
+(1) Try out GE.... undefined.
+
+atutu FECEG 2°
+
+4
+Sim, a API do PlugShare parece ser uma ótima escolha para o seu projeto. Ela fornece informações sobre estações de carregamento, que você pode usar para calcular quantos postos elétricos você precisará para sua viagem.
+
+Você pode usar o endpoint `GET /locations/nearby` para obter as estações de carregamento próximas a um local específico. Com essas informações, você pode calcular a distância entre as estações e determinar quantas você precisará para a viagem.
+
+Lembre-se de que você precisará registrar uma chave de API para acessar a API do PlugShare. Além disso, você precisará implementar a lógica para calcular a quantidade de postos elétricos com base na distância da viagem e na capacidade do veículo elétrico.
+
+Espero que isso ajude! Se você tiver mais perguntas, fique à vontade para perguntar. 😊
+
+
+ATUTU 2.0
+
+A API do Google Maps é uma plataforma que permite integrar mapas, rotas, lugares e outros recursos do Google em seus aplicativos web ou móveis. A API do PlugShare é uma interface que permite acessar informações sobre estações de recarga, avaliações e fotos de veículos elétricos em sua base de dados12
+
+Você pode combinar as duas APIs para criar aplicativos que mostrem as estações de recarga mais próximas, calculem as rotas mais eficientes, exibam as avaliações e fotos dos usuários, entre outras funcionalidades. Para isso, você precisa se registrar nas duas plataformas e obter as respectivas chaves de API, que são usadas para autenticar suas solicitações34
+
+Aqui está um exemplo de código em JavaScript que usa as duas APIs para mostrar um mapa com as estações de recarga em uma determinada área:
+
+JavaScript
+
+// Carrega as bibliotecas do Google Maps e do PlugShare
+<script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DO_GOOGLE_MAPS"></script>
+<script src="https://api.plugshare.com/js/plugshare.js?key=SUA_CHAVE_DO_PLUGSHARE"></script>
+
+// Cria um mapa centrado em São Paulo
+var map = new google.maps.Map(document.getElementById('map'), {
+  center: {lat: -23.5505, lng: -46.6333},
+  zoom: 10
+});
+
+// Cria um objeto PlugShare para acessar a API
+var plugshare = new PlugShare();
+
+// Define os parâmetros da busca por estações de recarga
+var params = {
+  latitude: -23.5505,
+  longitude: -46.6333,
+  distance: 50 // em quilômetros
+};
+
+// Faz a busca e adiciona marcadores no mapa para cada estação encontrada
+plugshare.search(params, function(data) {
+  for (var i = 0; i < data.length; i++) {
+    var location = data[i];
+    var marker = new google.maps.Marker({
+      position: {lat: location.latitude, lng: location.longitude},
+      map: map,
+      icon: location.icon,
+      title: location.name
+    });
+  }
+});
+
+
+Para obter uma chave de API do Google Maps, você precisa seguir alguns passos:
+
+Primeiro, você precisa ter uma conta do Gmail. Se você não tiver, pode criar uma gratuitamente aqui.
+Depois, você precisa acessar o Console de APIs do Google e criar um projeto. Você pode fazer isso aqui2.
+Em seguida, você precisa ativar a API Maps JavaScript no seu projeto e criar uma chave de API. Você pode ver como fazer isso aqui3.
+Por fim, você precisa restringir a sua chave de API para limitar o uso somente às APIs necessárias para o seu aplicativo. Você pode ver como fazer isso [aqui].
+Espero que isso tenha te ajudado a obter uma chave de API do Google Maps. Se você tiver mais alguma dúvida, pode me perguntar. 😊
+
+https://developers.google.cn/maps/documentation/javascript/get-api-key?hl=pt-br link 2
+
+https://developers.google.cn/maps/documentation/android-sdk/get-api-key?hl=pt-br limk 3
+
+
+
+PlugShare: um aplicativo global que permite localizar estações de carregamento públicas e privadas, ver as avaliações e fotos dos usuários, pagar pelo celular e planejar rotas com paradas para recarga1.
+ChargeMap: um aplicativo que oferece uma ampla gama de opções de recarga, com filtros por tipo de conector e velocidade, e permite planejar rotas com paradas em estações de recarga2.
+Electromaps: um aplicativo popular na Europa que permite encontrar estações de carregamento dentro de uma região geográfica, filtrar por tipo de conector e velocidade, e planejar rotas com paradas em estações de recarga3.
+Google Maps: um aplicativo que, além de oferecer rotas e navegação, também permite encontrar estações de carregamento próximas, ver informações como preço, disponibilidade e avaliações, e adicionar paradas para recarga na sua viagem4.000
+
+
+
+
+
