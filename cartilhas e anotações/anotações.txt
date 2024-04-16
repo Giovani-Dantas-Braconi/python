@@ -452,6 +452,13 @@ ai ele tira 100 da Conta1 e adiciona Conta2 em 100
 
 
 
+COMO DIFERENCIAR O ARQUIVO DE CLASSES E DE USO NO PYTHON COM POO?
+
+é só usar o 
+if __name__ == "__name__":
+    dfkdjfkjdfkjdfkjdkfj
+
+
 
 
 
